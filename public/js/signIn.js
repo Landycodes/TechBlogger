@@ -1,4 +1,3 @@
-//const { json } = require("express");
 
 const signInForm = async (event) => {
     event.preventDefault();
