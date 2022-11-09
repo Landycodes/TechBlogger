@@ -1,13 +1,12 @@
-
-const signInForm = async (event) => {
+const signUpForm = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#username').value.trim();
-    const pass = document.querySelector('#password').value.trim();
+    const name = document.querySelector('#newname').value.trim();
+    const pass = document.querySelector('#newpass').value.trim();
 
     if(name && pass) {
 
-        const res = await fetch('/api/user/signin', {
+        const res = await fetch('/api/user', {
             method: 'POST',
             body: JSON.stringify({ "username": name, "password": pass }),
             headers: {'Content-Type': 'application/json'},
@@ -15,12 +14,11 @@ const signInForm = async (event) => {
         });
         if(res.ok) {
             document.location.replace('/dashboard')
-            alert(`${name}, you have been signed in!`)
+            alert(`${name}, your account has been created!`)
         } else {
             alert(res.statusText)
         }
     } 
-}
+};
 
-document.querySelector('#signin-form').addEventListener('submit', signInForm);
-
+document.querySelector('#signup-form').addEventListener('submit', signUpForm);

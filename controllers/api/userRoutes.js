@@ -2,7 +2,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-let message = 'please log in'
 
 router.post('/', async (req, res) => {
     try {
@@ -44,7 +43,6 @@ router.post('/', async (req, res) => {
         req.session.logged_in = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
-        console.log('You are now logged in!')
       });
   
     } catch (err) {

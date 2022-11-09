@@ -8,7 +8,8 @@ body {
 }
 
 .navbar {
-    background-color: lightcoral;
+    background-color: black;
+    color: white;
     top: 0;
     width: 100%;
     height: auto;
@@ -28,11 +29,16 @@ h1 {
     list-style: none;
     justify-content: center;
 }
+
 .navBtn > a {
-text-decoration: none;
-color: black;
-cursor: pointer;
-margin: 0 10px 5px 10px;
+    color: white;
+    margin: 0 10px 5px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;  
 }
 
 .container {
@@ -45,12 +51,13 @@ form {
     flex-direction: column;
     font-size: x-large;
     padding: 15px;
-    background-color: lightcoral;
+    background-color: black;
+    color: white;
     width: 40%;
     border-radius: 5px;
     
 }
-#username, #password {
+#username, #password, #newname, #newpass {
     height: 30px;
     width: 65%;
     font-size: large;
@@ -75,9 +82,21 @@ form > button {
 
 #sign-out {
     font-family: monospace;
+    color: white;
     background: none;
     border: none;
     cursor: pointer;
    font-size: 14px;
    margin-bottom: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#sign-up {
+    font-size: 18px;
+    padding: 5px;
+    width: 30%;
+    margin-top: 10px;
 }
