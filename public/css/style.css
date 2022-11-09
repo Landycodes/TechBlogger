@@ -1,0 +1,71 @@
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: lightcoral;
+    top: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+h1 {
+    margin-top: 0px;
+}
+.title {
+    margin-top: 10px;
+    text-align: center;
+}
+.navBtn {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}
+.navBtn > a {
+text-decoration: none;
+color: black;
+cursor: pointer;
+margin: 0 10px 5px 10px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    padding: 15px;
+    background-color: lightcoral;
+    width: 40%;
+    border-radius: 5px;
+    
+}
+#username, #password {
+    height: 30px;
+    width: 65%;
+    font-size: large;
+    text-align: center;
+}
+form > button {
+    padding: 5px;
+    margin: 5px;
+    font-size: large;
+}
+
+.blog-container {
+    border: 4px black solid;
+    background-color: burlywood;
+    border-radius: 2px;
+    width: 65%;
+    margin: auto;
+}
+.blog-title {
+    border-bottom: 4px solid black;
+}
