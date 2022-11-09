@@ -15,6 +15,7 @@ const signInForm = async (event) => {
         });
         if(res.ok) {
             document.location.replace('/dashboard')
+            alert(`${name}, you have been signed in!`)
         } else {
             alert(res.statusText)
         }

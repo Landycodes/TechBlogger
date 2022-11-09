@@ -6,6 +6,7 @@ const signout = async () => {
   
     if (response.ok) {
       document.location.replace('/');
+      alert('you have been signed out!')
     } else {
       alert(response.statusText);
     }

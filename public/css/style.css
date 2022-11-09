@@ -1,7 +1,10 @@
+
 body {
     background-color: gray;
     margin: 0;
     padding: 0;
+    font-family: monospace;
+    font-size: larger;
 }
 
 .navbar {
@@ -68,4 +71,13 @@ form > button {
 }
 .blog-title {
     border-bottom: 4px solid black;
+}
+
+#sign-out {
+    font-family: monospace;
+    background: none;
+    border: none;
+    cursor: pointer;
+   font-size: 14px;
+   margin-bottom: 5px;
 }
