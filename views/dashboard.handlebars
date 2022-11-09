@@ -1,1 +1,12 @@
-<h1 class="title">Dashboard</h1>
+<div class="title">
+<h1>Dashboard</h1>
+<button><a href="/createpost">New Post</a></button>
+</div>
+<br>
+{{#each blogs as |blog|}}
+<div class=" title blog-container">
+<div class="blog-title"> <h2>{{blog.title}}</h2> <p>{{blog.user.username}} {{formatDate blog.date}}</p></div>
+<h3 class="blog-text"> {{blog.text}}</h3>
+</div>
+<br>
+{{/each}}

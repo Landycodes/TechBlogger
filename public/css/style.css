@@ -63,6 +63,15 @@ form {
     font-size: large;
     text-align: center;
 }
+
+#post-title {
+    text-align: center;
+    height: 20px;
+}
+#post-text {
+height: 50px;
+}
+
 form > button {
     padding: 5px;
     margin: 5px;
