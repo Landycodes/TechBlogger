@@ -70,41 +70,22 @@ router.get('/dashboard', withAuth, async (req,res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-  // try {
-  //   const userData = await User.findByPk(req.session.user_id, {
-  //     attributes: { exclude: ['password'] },
-  //     include: [{model: Blog}]
-  //   });
-
-  //   const user = userData.get({ plain: true });
-  //   res.render('dashboard', {
-  //     ...user,
-  //     logged_in: true
-  //   });
-
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
 });
 
 //get createpost page
 router.get('/createpost', withAuth, async (req, res) => {
+  res.render('createpost')
+});
+
+router.get('/blog/:id', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{model: Blog}]
-    });
-
-    const user = userData.get({ plain: true });
-    res.render('createpost', {
-      ...user,
-      logged_in: true
-    });
-
+    const blogId = await Blog.findByPk(req.params.id, {
+      include: [{model: User}]
+    })
+res.status(200).json(blogId)
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
 module.exports = router;

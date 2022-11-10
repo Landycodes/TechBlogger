@@ -18,12 +18,12 @@ router.post('/', withAuth, async (req, res) => {
   });
 
   //delete blog by id
-  router.delete('/:id', withAuth, async (req, res) => {
+  router.delete('/:id', async (req, res) => {
     try {
       const blogData = await Blog.destroy({
         where: {
           id: req.params.id,
-          user_id: req.session.user_id,
+          // user_id: req.session.user_id,
         },
       });
   
@@ -31,8 +31,7 @@ router.post('/', withAuth, async (req, res) => {
         res.status(404).json({ message: 'blog ID not found!' });
         return;
       }
-  
-      res.status(200).json(blogData);
+      res.render('dashboard');
     } catch (err) {
       res.status(500).json(err);
     }
