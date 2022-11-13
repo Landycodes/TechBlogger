@@ -99,7 +99,7 @@ form > button {
    margin-bottom: 5px;
 }
 
-button {
+button, .blog-container {
     cursor: pointer;
 }
 

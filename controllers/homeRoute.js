@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const { Blog, User } = require('../models');
+const { text } = require('express');
 
 
 //get homepage
@@ -74,8 +75,20 @@ router.get('/dashboard', withAuth, async (req,res) => {
 
 //get createpost page
 router.get('/createpost', withAuth, async (req, res) => {
-  res.render('createpost')
+  res.render('createpost', {
+    logged_in: req.session.logged_in, 
+  })
 });
+
+router.get('/updatepost/:id', withAuth, async (req, res) => {
+  const blogData = await Blog.findByPk(req.params.id);
+  const blog = blogData.get({plain: true});
+  res.render('updatepost', {
+    blog,
+    logged_in: req.session.logged_in, 
+  })
+});
+
 
 router.get('/blog/:id', async (req, res) => {
   try {

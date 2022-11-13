@@ -4,13 +4,12 @@
 </div>
 <br>
 {{#each blogs as |blog|}}
-<div class=" title blog-container">
+<div class="title blog-container">
 <div class="blog-title"> <h2>{{blog.title}}</h2> <p>{{blog.user.username}} {{formatDate blog.date}}</p></div>
 <h3 class="blog-text"> {{blog.text}}</h3>
 <button class="deleteBtn" data-id="{{blog.id}}">Delete</button>
-<button data-id="{{blog.id}}">Update</button>
+<button class="updateBtn"><a href="/updatepost/{{blog.id}}"> Update</a></button>
 </div>
-
 <br>
 {{/each}}
 
