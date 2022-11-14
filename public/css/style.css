@@ -109,3 +109,10 @@ button, .blog-container {
     width: 30%;
     margin-top: 10px;
 }
+
+
+.comment-form {
+    width: 50%;
+    height: 200px;
+    margin: auto;
+}

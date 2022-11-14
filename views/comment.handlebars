@@ -1,0 +1,16 @@
+<div class=" title blog-container" data-id="{{blog.id}}">
+<div class="blog-title"> <h2>{{blog.title}}</h2> <p>{{blog.user.username}} {{formatDate blog.date}}</p></div>
+<h3 class="blog-text"> {{blog.text}}</h3>
+</div>
+<br>
+<div class=" title blog-container" data-id="{{blog.id}}">
+<h3 class="comment-text">hello {{blog.comment.comment}}</h3>
+</div>
+<br>
+<form class="comment-form">
+    <label for="comment">Write a comment</label>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    <button type="submit" id="addcomment">Add comment</button>
+</form>
+
+<script src="/js/comment.js"></script>

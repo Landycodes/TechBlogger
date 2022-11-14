@@ -2,9 +2,12 @@
     <h2 class="title">Here we discuss all kinds of topics on all kinds of technology! Please sign in to continue, its free!</h2>
 
 {{#each blogs as |blog|}}
+<a href="comment/{{blog.id}}">
 <div class=" title blog-container">
 <div class="blog-title"> <h2>{{blog.title}}</h2> <p>{{blog.user.username}} {{formatDate blog.date}}</p></div>
 <h3 class="blog-text"> {{blog.text}}</h3>
 </div>
+</a>
 <br>
 {{/each}}
+
